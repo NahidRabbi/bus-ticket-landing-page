@@ -125,3 +125,27 @@ for (let i = 0; i < buttons.length; i++) {
     });
   }
   console.log(buttonCount);
+
+  // Utility functions---------------------------
+
+function set_innertext(elementId, value) {
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+  }
+  function seat_count(elementId) {
+    let element = parseInt(document.getElementById(elementId).innerText);
+    // console.log(element)
+    element -= 1;
+  
+    return element;
+  }
+  
+  function increment_seat_count(elementId) {
+    let element = parseInt(document.getElementById(elementId).innerText);
+  
+    // console.log(element)
+    element += 1;
+  
+    return element;
+  }
+
