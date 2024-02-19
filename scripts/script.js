@@ -149,3 +149,30 @@ function set_innertext(elementId, value) {
     return element;
   }
 
+  function grand_total(elementId) {
+    const element = parseInt(document.getElementById("total-price").innerText);
+  
+    return element;
+  }
+  function hide_element(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.add("hidden");
+  }
+  function show_element(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.remove("hidden");
+  }
+  
+  function phone_number_length() {
+    let phoneNumber = document.getElementById("phn-number");
+    phoneNumber.addEventListener("keyup", function () {
+      let phoneNumberValue = phoneNumber.value;
+      let phone_number_trim = phoneNumberValue.split("").join("");
+      let c = phone_number_trim.length;
+      return c;
+    });
+  }
+  
+  document.getElementById("continue-btn").addEventListener('click',function(){
+    window.location.reload()
+  })
